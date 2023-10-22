@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey form using HTML, CSS, and JS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="titletext">Survey Form</h1>
+        <p class="infotext">*Indicates a required field</p>
+        <form id="survey-form">
+            <label for="first-name" class="required">First Name</label>
+            <input type="text" id="first-name" required>
+            
+            <label for="last-name" class="required">Last Name</label>
+            <input type="text" id="last-name" required>
+            
+            <div class="dobandcountry">
+            <div>
+                <label for="dob" class="required">Date of Birth</label>
+                <input class = "dobclass" type="date" id="dob" required>
+            </div>
+
+            
+            <div>
+                <label for="country" class="required">Country</label>
+                <select id="country" required>
+                <option value="" disabled selected>Select a country</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Russia">Russia</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <!-- Add more countries as needed -->
+            </select></div>
+            </div>
+            
+            
+            <label class="required">Gender</label>
+            <div class="labelclass">
+            <input type="radio" value="male" name="gender">
+            <label for="male">Male</label> 
+            <input type="radio" value="female" name="gender">
+            <label for="female">Female</label>
+            <input type="radio" value="other" name="gender">
+            <label for="other">Other</label>
+            </div>
+            
+            <br>
+            <label for="profession" class="required">Profession</label>
+            <input type="text" id="profession" required>
+            
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" required>
+            
+            <label for="mobile" class="required">Mobile Number</label>
+            <input type="tel" id="mobile" required>
+            
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+        </form>
+    </div>
+
+    <div id="popup">
+        <div id="popup-content">
+            <h2>Survey Data</h2>
+            <div id="popup-results"></div>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
